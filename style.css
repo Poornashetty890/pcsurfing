@@ -83,7 +83,7 @@ h1{
 }
 
 .home_div{
-    width: 600px;
+    width: 599px;
 }
 
 .home_img{
@@ -93,13 +93,13 @@ h1{
 }
 
 .home_img1{
-    
-    /* margin-right: 5px; */
+       
     margin-left: 10px;
-    padding-left: 0px;
     padding-top: 20px;
-    
-
+}
+.imgs{
+    height: 400px;
+    width: 300px;
 }
 
 .blogs_article{
@@ -225,4 +225,35 @@ h1{
   margin-left: auto;
   margin-right: auto;
   
+}
+
+@media only screen and (max-width:600px) {
+    .blogs_head_para{
+        width: 70%;
+    }
+
+    .blogs_article{
+        width: 100%;
+    }
+    .home_article{
+        width: 100%;
+    }
+    .imgs{
+        height: 267px;
+        width: 199px;
+    }
+    .home_img1{
+       
+        margin-left: 4%;
+        padding-top: 20px;
+    }
+    .footers {
+        margin-left: 50%;
+      width: 50%;
+      padding: 10px;
+      color: #333;
+      font-size: small;
+        text-align: center;
+        
+    }
 }
