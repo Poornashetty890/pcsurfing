@@ -9,7 +9,7 @@ header {
     background-color: #fff;
     padding: 15px 120px;
     
-    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+    
 }
 
 nav {
@@ -33,11 +33,20 @@ ul {
     display: flex;
 }
 
-.nav {
-    padding-left:  20px;
-    padding-top: 9px;
-    
-}
+ul li {
+    margin-right: 20px;
+  }
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: none;
+  }
+
+#check {
+    display: none;
+  }
 
 
 
@@ -75,7 +84,7 @@ a:hover {
 
 h1{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 42px;
+    font-size: 22px;
 }
 
 .home_para{
@@ -84,11 +93,12 @@ h1{
 
 .home_div{
     width: 599px;
+
 }
 
 .home_img{
     list-style: none;
-    
+    margin-left: 60px;
     display: flex;
 }
 
@@ -113,8 +123,6 @@ h1{
 
 .blogs_div{
     list-style:none;
-    
-   align-content: center;
     display: flex;
 
 }
@@ -137,6 +145,10 @@ h1{
     padding-top: 2px;
 }
 
+.blogs_imgs{
+    height:150px ;
+    width:250px;
+}
 .events{
     padding: 30px 120px;
 }
@@ -161,6 +173,11 @@ h1{
 .product{
     align-content: center;
     display: flex;
+}
+
+.product_img img{
+    height: 250px;
+    width: 300px;
 }
 
 .product_det{
@@ -204,6 +221,11 @@ h1{
     
 }
 
+.classes_div img{
+    height: 250px;
+    width: 250px;
+}
+
 .footers {
     margin: auto;
   width: 50%;
@@ -228,27 +250,97 @@ h1{
 }
 
 @media only screen and (max-width:600px) {
-    .blogs_head_para{
-        width: 70%;
+
+    /* Nav */
+
+    header {
+        background-color: #fff;
+        padding: 15px 5%;
+        
+        
     }
 
-    .blogs_article{
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+      }
+    
+    ul li{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: white;
         width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        /* align-items: center; */
+        transition: all 0.1s;
+        margin: 20px 0;
+    }
+
+    
+    
+    ul li a {
+        font-size: 20px;
+    }
+    #check:checked ~ ul {
+        right: 0;
+    }
+    /* Home */
+
+    .home{
+        padding: 0px 5%;
+        justify-content: center;
     }
     .home_article{
         width: 100%;
     }
+    .home_div{
+        width: 100%;
+    }
     .imgs{
-        height: 267px;
-        width: 199px;
+        height: 150px;
+        width: 110px;
+    }
+    .home_img{
+        margin-left: 0px;
     }
     .home_img1{
        
         margin-left: 4%;
         padding-top: 20px;
     }
+
+    /* Blogs */
+    .blogs_head_para{
+        width: 100%;
+    }
+
+    .blogs_article{
+        width: 100%;
+    }
+    .blogs_div{
+        display: flex;
+        flex-direction: column;
+
+    }
+   
+
+    .blogs_imgs{
+        width: 150px;
+    }
+
+    .blogs_img{
+        
+        margin-left: 0px;
+        padding-top: 2px;
+    }
     .footers {
         margin-left: 50%;
+        margin-right: 50%;
       width: 50%;
       padding: 10px;
       color: #333;
@@ -256,4 +348,91 @@ h1{
         text-align: center;
         
     }
+
+    
+
+    .blogs{
+        padding: 60px 5%;
+        
+    }
+
+    .events{
+        padding: 30px 5%;
+        
+    }
+
+    .events_img{
+        justify-content: center;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding-top: 2px;
+        /* padding-bottom: 14px; */
+    }
+    
+    
+
+    .product{
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .product_article{
+        padding: 20px 5%;
+    }
+
+    .product_img_det{
+        color: #333;
+        width: 100%;
+        font-size: 11px;
+        font-style: italic;
+    }
+
+    .product_img img{
+        height: 150px;
+        width: 225px;
+    }
+    .product_det{
+        padding-left: 0%;
+    }
+    .classes{
+        padding: 1px 5%;
+    }
+
+    .classes_div{
+        justify-content: center;
+        margin-left: 0%;
+        align-items: center;
+    }
+    
+    .classes_div h2{
+        padding-left: 0px;
+        font-size: 20px;
+        color: #333;
+        
+    }
+
+    .classes_div img{
+        height: 175px;
+        width: 175px;
+    }
+
+    .footers {
+        margin: 0px;
+      width: 100%;
+      padding: 0px;
+      color: #333;
+      font-size: small;
+        
+        
+    }
+     .footer_head{
+        width:100%;
+    }
+    
+    .footers img{
+        display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
+    } 
 }
